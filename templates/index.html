@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+  />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Prediction Web App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to our Housing Prediction Web App</h1>
+    </div>
+    <h4>{{prediction_text}}</h4>
+    <form action="{{url_for('predict')}}"method="post">
+        <input type="number" name="area" placeholder="House Area" required="required"/><br>
+        <input type="number" name="bedrooms" placeholder="Number of bedrooms" required="required"/><br>
+        <input type="number" name="bathrooms" placeholder="Number of bathrooms" required="required"/><br>
+        <input type="number" name="stories" placeholder="Number of stories" required="required"/><br>
+        <input type="text" name="mainroad" placeholder="Near a main road(yes/no)" required="required"/><br>
+        <input type="text" name="guestroom" placeholder="Guestroom(yes/no)" required="required"/><br>
+        <input type="text" name="basement" placeholder="Basement(yes/no)" required="required"/><br>
+        <input type="text" name="hotwater" placeholder="Hotwater(yes/no)" required="required"/><br>
+        <input type="text" name="airconditioning" placeholder="airconditioning(yes/no)" required="required"/><br>
+        <input type="number" name="parking" placeholder="Number of parking" required="required"/><br>
+        <input type="text" name="prefarea" placeholder="Preferable area(yes/no)" required="required"/><br>
+        <input type="text" name="furnishingstatus" placeholder="furnishing status(semi-furnished/furnished)" required="required"/><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict House Pricing</button>
+    </form>
+    
+</body>
+</html>
